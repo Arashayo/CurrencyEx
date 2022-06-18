@@ -21,7 +21,7 @@ $("#ActualDate").on("change",function(){
             second = tempD;
         }
     
-        const ACTUAL = 'http://api.nbp.pl/api/exchangerates/rates/A/'+ GetCurr() +"/"+second +"/"+ first +'/?format=json';
+        const ACTUAL = 'https://api.nbp.pl/api/exchangerates/rates/A/'+ GetCurr() +"/"+second +"/"+ first +'/?format=json';
 
         $.ajax({
             url:ACTUAL,

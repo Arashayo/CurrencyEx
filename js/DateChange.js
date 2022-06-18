@@ -1,6 +1,6 @@
 $("#currDate").on("change",function(){
     var selected = $(this).val();
-    const DIFF = 'http://api.nbp.pl/api/exchangerates/tables/A/'+ selected +'/?format=json';
+    const DIFF = 'https://api.nbp.pl/api/exchangerates/tables/A/'+ selected +'/?format=json';
 
 
     var now = new Array();
@@ -12,7 +12,7 @@ $("#currDate").on("change",function(){
     swapDate(newD);
     ;
 
-    const DIFFERENCE = 'http://api.nbp.pl/api/exchangerates/tables/A/'+ getDateAPI(newD) +'/?format=json';
+    const DIFFERENCE = 'https://api.nbp.pl/api/exchangerates/tables/A/'+ getDateAPI(newD) +'/?format=json';
 
 
     $("#date").html("Kursy walut, notowanie z dnia "+ selected);
