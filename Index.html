@@ -1,0 +1,195 @@
+<html>
+
+<head>
+<meta charset="utf-8">
+<title> Wymiana Walut</title>
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<script src="jquery/jquery-3.5.1.min.js"></script>
+<script src="js/API.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<script src="https://cdn.plot.ly/plotly-2.12.1.min.js"></script>
+</head>
+
+<body style="background-color:#111B21">
+    <div id="page-container">
+        <div id="content-wrap">
+
+<header style="text-align: center;"><p>Przelicznik Walutowy</p></header>
+
+<aside> 
+    <table class="currency-table">
+        <thead>
+            <tr>
+                <th colspan="3" id="date">
+                </th>
+            </tr>
+            <tr>
+                <th colspan="3" style="text-align: center">
+                    <input type="date" id="currDate">
+                </th>
+            </tr>
+            <tr>
+                <th style="text-align: center;">
+                    Waluta
+                </th>
+                <th>
+                    Kurs(zł)
+                </th>
+                <th>
+                    Zmiana(%)
+                </th>
+            </tr>
+        </thead>
+        <tbody id="currency">
+
+        </tbody>
+
+    </table>
+</aside>
+
+
+<section>
+    <main>
+        
+            <div class="converter-box">
+                <p id="title">
+                    KONWERTER WALUTY (PLN)
+                </p>
+                <div class="amount-form">
+                    <p>Kwota którą chcesz przeznaczyć na wymianę: </p> 
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Złoty:</span>
+                    <input type="text" placeholder="0.00" class="form-control searchBox"  id="amountinput">
+                    </div>
+                    <p></p>
+                </div>
+                
+                            <div style="text-align: center;">
+                                <button class="btn btn-outline-light"  type="submit" id="convert">
+                                Przelicz
+                            </button>
+                        
+                        
+                            <div>
+                                <h2>
+                                    Ilość waluty jaką możesz kupić to: 
+                                    <span class="converted-valuePLN">
+
+                                    </span>
+                            </h2>
+                        </div>
+                    </div>
+            </div>
+
+<p>
+
+</p>
+            <div class="converter-box">
+                <p id="title">
+                    KONWERTER WALUTY (Dowolna)
+                </p>
+                    <p>Kwota którą chcesz przeznaczyć na wymianę: </p> 
+                    <input type="text" placeholder="0.00" class="form-control searchBox"  id="amountinput2">
+                    <p></p>
+
+
+                    <div class="container">
+                        <div class="row">
+                          <div class="col-sm">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1">Z:</span>
+                                            <select class="buy-form" id="sell">
+                                            
+                                            </select>
+                                        </div>
+                
+                          </div>
+                          <div class="col-sm">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1">Na:</span>
+                                            <select class="buy-form" id="buy2">
+                                            
+                                            </select>
+                                        </div>
+                          </div>
+                        </div>
+                      </div>
+               
+                            <div style="text-align: center;">
+                                <button class="btn btn-outline-light"  type="submit" id="convert2">
+                                Przelicz
+                            </button>
+                        
+                        
+                            <div>
+                                <h2>
+                                    Ilość waluty jaką możesz kupić to: 
+                                    <span class="converted-valueANY">
+
+                                    </span>
+                            </h2>
+                        </div>
+                    </div>
+            </div>
+            <p>
+
+            </p>
+            <div class="converter-box">
+                <p id="title">
+                    WYKRES ZALEŻNOŚCI W PRZEDZIALE       
+                </p>
+                <table class="currency-table">
+                    <thead>
+                        <tr>
+                            <th colspan="3" style="text-align: center">
+                                Wykresy zależności
+                            </th>
+                        </tr>
+                        <tr>
+                            <th style="text-align: center">
+                                Data od
+                            </th>
+                            <th style="text-align: center">
+                                Waluta
+                            </th>
+                            <th style="text-align: center">
+                                Data do
+                            </th>
+                        </tr>
+                        <tr>
+                            <th style="text-align: center">
+                                <input type="date" id="ActualDate">
+                            </th>
+                            <th>
+                                <select class="buy-form" id="currChart"></select>
+                            </th>
+                            <th style="text-align: center">
+                                <input type="date" id="EndDate" disabled>
+                            </th>
+                        </tr>
+                        
+                        
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="3" id = 'chart1'>
+                                <div  id="chart"></div>
+                            </td>
+                            </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </main>
+</section>
+</div>
+<footer><p>Stronę wykonał Dominik Jezierski</p></footer>
+</div>
+<script src="js/CurrencyExchange.js"></script>
+<script src="js/DateChange.js"></script>
+<script src="js/ColorSwap.js"></script>
+<script src="js/Charts.js"></script>
+
+</body>
+
+</html>
