@@ -20,7 +20,7 @@ header p {
 }
 
 section { 
-    margin: 25px 0;
+    margin: 25px 0px;
     width:70%; 
     height: 100px; 
     float: left; 
@@ -28,8 +28,8 @@ section {
 
 aside { 
     width:30%; 
-    padding-right: 20%;
-    height: flex; 
+    padding-left: 5%;
+    height: flex;
     float: right; 
 }
 
@@ -104,7 +104,9 @@ td{
     border-radius: 5px 5px 0 0;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    position:fixed;
   }
+
 .currency-table tbody {
     background-color: #202C33;
 }
@@ -120,8 +122,36 @@ td{
     padding: 12px 15px;
   }
 
+  .chart-table
+  {
+     border-collapse: collapse;
+     margin: 25px 0;
+     font-size: 0.9em;
+     min-width: 400px;
+     border-radius: 5px 5px 0 0;
+     overflow: hidden;
+     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  }
+  .chart-table tbody {
+     background-color: #202C33;
+ }
+ .chart-table thead tr {
+     background-color: #203542;
+     color: #8696A0;
+     text-align: left;
+     font-weight: bold;
+   }
   .converter-box {
     width: 50%;
+    margin: auto;
+    padding: 30px;
+    border-radius: 50px;
+    background-color: #203542;
+    color: #8696A0;
+}
+.chart-box
+{
+    width: auto;
     margin: auto;
     padding: 30px;
     border-radius: 50px;
@@ -139,7 +169,7 @@ h2{
   
   #page-container {
     position: relative;
-    min-height: 2000px;
+    min-height: 2350px;
   }
   
  #chart{
