@@ -1,11 +1,11 @@
 var idk = new Date();
 ThreeDays(idk);
 
-const DIFFERENCE = 'http://api.nbp.pl/api/exchangerates/tables/A/'+ getDateAPI(idk) +'/?format=json';
+const DIFFERENCE = 'https://api.nbp.pl/api/exchangerates/tables/A/'+ getDateAPI(idk) +'/?format=json';
 
 
 $(document).ready(function(){
-    const ACTUAL = 'http://api.nbp.pl/api/exchangerates/tables/A/?format=json';
+    const ACTUAL = 'https://api.nbp.pl/api/exchangerates/tables/A/?format=json';
 
     var now = new Array();
     var then = new Array();
